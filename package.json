@@ -1,0 +1,36 @@
+{
+  "name": "point-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "budo client/src/index.js --dir client/public --live --open",
+    "start:server": "node server/service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRJurman/point-cards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRJurman/point-cards/issues"
+  },
+  "homepage": "https://github.com/JRJurman/point-cards#readme",
+  "dependencies": {
+    "budo": "^10.0.3",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "express": "^4.15.3",
+    "express-ws": "^3.0.0",
+    "internal-ip": "^1.2.0",
+    "tram-one": "^1.0.0",
+    "xtend": "^4.0.1"
+  }
+}
