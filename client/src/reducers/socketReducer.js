@@ -10,6 +10,20 @@ module.exports = (socketConnection, action) => {
         user: action.user
       }))
       return socketConnection
+    case 'reveal':
+      if (!action.fromSocket) {
+        socketConnection.send(JSON.stringify({
+          type: 'reveal'
+        }))
+      }
+      return socketConnection
+    case 'clear':
+      if (!action.fromSocket) {
+        socketConnection.send(JSON.stringify({
+          type: 'clear'
+        }))
+      }
+      return socketConnection
     default:
       return socketConnection
   }

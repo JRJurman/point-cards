@@ -1,4 +1,5 @@
 const Tram = require('tram-one')
+const xtend = require('xtend')
 const cardReducer = require('./reducers/cardReducer')
 const userReducer = require('./reducers/userReducer')
 const voteReducer = require('./reducers/voteReducer')
@@ -57,11 +58,7 @@ const roomPage = (state) => {
 const defaultConnection = new WebSocket('ws://192.168.1.18:4850/')
 defaultConnection.onmessage = ({ data }) => {
   const message = JSON.parse(data)
-  app.store.dispatch({
-    type: message.type,
-    user: message.user,
-    card: message.card
-  })
+  app.store.dispatch(xtend(message, {fromSocket: true}))
 }
 
 const defaultName = localStorage.getItem('name') || ''
