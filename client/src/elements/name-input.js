@@ -7,14 +7,14 @@ const inputStyle = `
 
 module.exports = (attrs, children) => {
   return html`
-    <div style=${attrs.style}>
+    <span style=${attrs.style}>
       Name:
       <input
         value=${attrs.name}
-        onchange=${attrs.onnameset}
+        onkeyup=${attrs.onnameset}
         style=${inputStyle}
         type="text"
       />
-    </div>
+    </span>
   `
 }

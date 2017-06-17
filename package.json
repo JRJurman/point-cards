@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:client": "budo client/src/index.js --dir client/public --live --open",
+    "start:client": "budo client/src/index.js --dir client/public --live --open --pushstate",
     "start:server": "node server/service.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

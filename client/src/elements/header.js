@@ -1,8 +1,10 @@
 const Tram = require('tram-one')
 const html = Tram.html()
 
-module.exports = () => {
+module.exports = (attrs, children) => {
   return html`
-    <h1>Point Cards</h1>
+    <h1 style=${attrs.style}>
+      Point Cards
+    </h1>
   `
 }
