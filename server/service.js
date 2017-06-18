@@ -7,12 +7,11 @@ const WS = expressWs(express(), null, { wsOptions })
 const server = WS.getWss()
 const app = WS.app
 
-// const games = {}
-
-app.ws('/', (ws) => {
+app.ws('/room/:room', (ws, req) => {
   ws.on('message', (msg) => {
-    // we shouldn't need server.clients... TODO generic broadcast
-    server.clients.forEach((client) => client.send(msg))
+    Array.from(server.clients)
+      .filter(client => client.upgradeReq.url === ws.upgradeReq.url)
+      .forEach(client => client.send(msg))
   })
 })
 

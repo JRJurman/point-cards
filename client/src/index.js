@@ -17,6 +17,18 @@ const html = Tram.html({
 })
 
 const roomPage = (state) => {
+  if (!state.socket) {
+    const roomSocket = new WebSocket(`ws://192.168.1.18:4850/room/${state.room}`)
+    roomSocket.onmessage = ({ data }) => {
+      const message = JSON.parse(data)
+      state.dispatch(xtend(message, {fromSocket: true}))
+    }
+    state.dispatch({
+      type: 'init_socket_connection',
+      socketConnection: roomSocket
+    })
+  }
+
   const onselectcard = (card) => () => {
     state.dispatch({
       type: 'select_card',
@@ -55,14 +67,8 @@ const roomPage = (state) => {
   `
 }
 
-const defaultConnection = new WebSocket('ws://192.168.1.18:4850/')
-defaultConnection.onmessage = ({ data }) => {
-  const message = JSON.parse(data)
-  app.store.dispatch(xtend(message, {fromSocket: true}))
-}
-
 const defaultName = localStorage.getItem('name') || ''
-app.addReducer('socket', socketReducer, defaultConnection)
+app.addReducer('socket', socketReducer, undefined)
 
 app.addReducer('card', cardReducer, '')
 app.addReducer('user', userReducer, defaultName)

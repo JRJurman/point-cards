@@ -1,7 +1,7 @@
 module.exports = (socketConnection, action) => {
   switch (action.type) {
     case 'init_socket_connection':
-      return socketConnection
+      return action.socketConnection
     case 'select_card':
       const newCard = (action.card !== action.oldCard) ? action.card : ''
       socketConnection.send(JSON.stringify({
