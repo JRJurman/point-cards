@@ -25,7 +25,7 @@ const footerSpacing = `
 
 module.exports = (attrs, children) => {
   return html`
-    <div class='page-wrapper vhs-top' style=${footerSpacing}>
+    <div class='page-wrapper' style=${footerSpacing}>
       <header style=${headerStyle}></header>
       ${children}
       <footer style=${footerStyle}></footer>

@@ -21,11 +21,15 @@ const controlFlex = `
 `
 
 const nameInputStyle = `
-  margin-top: 2rem;
+  margin-top: 1rem;
 `
 
 const controlsStyle = `
-  margin-top: 2rem;
+  margin-top: 1rem;
+`
+
+const wellStyle = `
+  margin-top: 1rem;
 `
 
 module.exports = (attrs, children) => {
@@ -49,7 +53,7 @@ module.exports = (attrs, children) => {
           onreveal=${attrs.onreveal}>
         </user-controls>
       </div>
-      <card-well>
+      <card-well style=${wellStyle}>
         ${votes}
       </card-well>
       <card-selector

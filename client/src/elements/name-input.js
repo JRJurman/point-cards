@@ -3,6 +3,8 @@ const html = Tram.html()
 
 const inputStyle = `
   font-size: 1em;
+  padding: 0.25em;
+  margin-left: 0.25em;
 `
 
 module.exports = (attrs, children) => {
