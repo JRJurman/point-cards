@@ -19,5 +19,6 @@ const ip = internalIp()
 const port = 4850
 
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`Service running on  ${ip}:${port}`)
 })
