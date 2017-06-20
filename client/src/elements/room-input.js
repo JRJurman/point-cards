@@ -4,19 +4,19 @@ const html = Tram.html()
 const inputStyle = `
   font-size: 1em;
   padding: 0.25em;
-  margin-left: 0.25em;
+  outline: 0;
 `
 
 module.exports = (attrs, children) => {
   return html`
-    <span style=${attrs.style}>
+    <div>
       <input
-        value=${attrs.name}
-        onkeyup=${attrs.onnameset}
+        value="${attrs.room}"
+        onkeyup=${attrs.onroomset}
         style=${inputStyle}
-        placeholder="User Name"
+        placeholder="Room Name"
         type="text"
       />
-    </span>
+    </div>
   `
 }

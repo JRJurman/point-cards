@@ -1,5 +1,6 @@
 const Tram = require('tram-one')
 
+const roomReducer = require('./reducers/roomReducer')
 const cardReducer = require('./reducers/cardReducer')
 const userReducer = require('./reducers/userReducer')
 const voteReducer = require('./reducers/voteReducer')
@@ -13,6 +14,7 @@ const app = new Tram({defaultRoute: '/'})
 
 const defaultName = localStorage.getItem('name') || ''
 
+app.addReducer('room', roomReducer, '')
 app.addReducer('socket', socketReducer, undefined)
 app.addReducer('card', cardReducer, '')
 app.addReducer('user', userReducer, defaultName)

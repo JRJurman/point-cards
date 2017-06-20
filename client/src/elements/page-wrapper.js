@@ -11,10 +11,11 @@ const headerStyle = `
 `
 
 const footerStyle = `
+  text-align: center;
   width: 100%;
   padding-left: 2rem;
   background: #087f23;
-  color: white;
+  color: #eee;
   position: absolute;
   bottom: 0px;
 `
@@ -26,7 +27,7 @@ const footerSpacing = `
 module.exports = (attrs, children) => {
   return html`
     <div class='page-wrapper' style=${footerSpacing}>
-      <header style=${headerStyle}></header>
+      <a href="/"><header style=${headerStyle}></header></a>
       ${children}
       <footer style=${footerStyle}></footer>
     </div>

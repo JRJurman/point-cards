@@ -1,12 +1,14 @@
 {
   "name": "point-cards",
   "version": "1.0.0",
-  "description": "",
+  "description": "Planning Poker Web App, built with Tram-One",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "start:client": "budo client/src/index.js --dir client/public --live --open --pushstate",
     "start:server": "node server/service.js",
+    "prebuild": "rm -rf dist && cp -r client/public/ dist",
+    "build": "browserify client/src/index.js -o dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/JRJurman/point-cards#readme",
   "dependencies": {
+    "browserify": "^14.4.0",
     "budo": "^10.0.3",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
