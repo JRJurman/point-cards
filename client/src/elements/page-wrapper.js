@@ -13,7 +13,6 @@ const headerStyle = `
 const footerStyle = `
   text-align: center;
   width: 100%;
-  padding-left: 2rem;
   background: #087f23;
   color: #eee;
   position: absolute;
