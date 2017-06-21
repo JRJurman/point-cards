@@ -11,7 +11,7 @@ const html = Tram.html({
 
 module.exports = (state) => {
   if (!state.socket) {
-    const roomSocket = new WebSocket(`ws://162.243.186.234/room/${state.room}`)
+    const roomSocket = new WebSocket(`ws://162.243.186.234:4850/room/${state.room}`)
     roomSocket.onmessage = ({ data }) => {
       const message = JSON.parse(data)
       state.dispatch(xtend(message, {fromSocket: true}))

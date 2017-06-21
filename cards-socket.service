@@ -2,10 +2,10 @@
 Description=Point Cards WebSocket Server
 
 [Service]
-ExecStart=/home/jrjurman/point-cards/server/service.js
+ExecStart=/usr/bin/node /home/jrjurman/point-cards/server/service.js
 Restart=always
-User=nobody
-Group=nobody
+User=jrjurman
+Group=jrjurman
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=NODE_ENV=production
 WorkingDirectory=/home/jrjurman/point-cards
