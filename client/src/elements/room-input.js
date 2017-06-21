@@ -2,9 +2,13 @@ const Tram = require('tram-one')
 const html = Tram.html()
 
 const inputStyle = `
+  color: white;
+  border: none;
+  border-bottom: solid 2px #087f23;
+  outline: 0;
+  background: none;
   font-size: 1em;
   padding: 0.25em;
-  outline: 0;
 `
 
 module.exports = (attrs, children) => {

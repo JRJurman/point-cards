@@ -4,7 +4,7 @@ const html = Tram.html()
 module.exports = (attrs, children) => {
   const wellStyle = `
     background: #087f23;
-    border-radius: 1em;
+    border-radius: 1rem;
     display: flex;
     flex-flow: wrap;
     padding: 1em;

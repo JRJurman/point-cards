@@ -17,7 +17,7 @@ const headerStyle = `
 
 const buttonStyle = `
   border: 2px solid white;
-  border-radius: 1em;
+  border-radius: 1rem;
   font-size: 1em;
   padding: 0.25em 0.75em;
   cursor: pointer;

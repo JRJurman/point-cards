@@ -25,7 +25,7 @@ module.exports = (attrs, children) => {
   const cardStyle = `
     width: 3em;
     line-height: 3.5em;
-    border-radius: 0.5em;
+    border-radius: 1rem;
     border: 4px solid ${attrs.selected ? 'orange' : 'white'};
     ${attrs.hidden ? `
       background: -webkit-repeating-linear-gradient(45deg, ${cardColor1}, ${cardColor1} 10px, ${cardColor2} 10px, ${cardColor2} 20px);
