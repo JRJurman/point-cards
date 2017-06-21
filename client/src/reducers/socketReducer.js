@@ -5,7 +5,7 @@ module.exports = (socketConnection, action) => {
     case 'init_socket_connection':
       return action.socketConnection
     case 'join_room':
-      const roomSocket = new WebSocket(`ws://192.168.1.18:4850/room/${action.roomName}`)
+      const roomSocket = new WebSocket(`ws://162.243.186.234/room/${action.roomName}`)
       roomSocket.onmessage = ({ data }) => {
         const message = JSON.parse(data)
         action.dispatch(xtend(message, {fromSocket: true}))

@@ -21,6 +21,7 @@ body {
   background: #4caf50;
   margin: 0;
   font-size: 1.25em;
+  position: relative;
 }
 
 a {
