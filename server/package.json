@@ -1,14 +1,11 @@
 {
-  "name": "point-cards",
+  "name": "point-cards-server",
   "version": "1.0.0",
   "description": "Planning Poker Web App, built with Tram-One",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm --prefix ./client-v7 install && npm --prefix ./server install",
-    "lint": "npm --prefix ./client-v7 lint && npm --prefix ./server lint",
-    "start:client": "npm --prefix ./client-v7 start",
-    "start:server": "npm --prefix ./server start",
-    "build": "npm --prefix ./client-v7 build"
+    "lint": "eslint .",
+    "start": "node service.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +19,14 @@
   },
   "homepage": "https://github.com/JRJurman/point-cards#readme",
   "dependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "express": "^4.15.3",
+    "express-ws": "^3.0.0",
+    "internal-ip": "^1.2.0"
   }
 }
