@@ -12,7 +12,6 @@ const homePage = require('./pages/home-page')
 
 const app = new Tram({defaultRoute: '/'})
 
-const defaultName = localStorage.getItem('name') || ''
 
 app.addReducer('room', roomReducer, '')
 app.addReducer('socket', socketReducer, undefined)

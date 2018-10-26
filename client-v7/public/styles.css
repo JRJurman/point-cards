@@ -1,0 +1,43 @@
+/* box-sizing helps content fill the size as expected */
+/* useful for fixing the footer: https://codepen.io/cbracco/pen/zekgx */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body, .main, .page-wrapper {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  background: #4caf50;
+  margin: 0;
+  font-size: 1.25em;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #087f23;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #087f23;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: #087f23;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #087f23;
+}

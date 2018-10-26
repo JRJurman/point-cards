@@ -1,0 +1,35 @@
+{
+  "name": "point-cards-legacy-client",
+  "version": "1.0.0",
+  "description": "Planning Poker Web App, built with Tram-One",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "budo ./src/index.js --dir ./public --live --open --pushstate",
+    "prebuild": "rm -rf ./dist && cp -r ./public/ ./dist",
+    "build": "browserify ./src/index.js -o ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRJurman/point-cards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRJurman/point-cards/issues"
+  },
+  "homepage": "https://github.com/JRJurman/point-cards#readme",
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "budo": "^10.0.3",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "tram-one": "^1.0.0",
+    "xtend": "^4.0.1"
+  }
+}

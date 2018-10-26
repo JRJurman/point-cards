@@ -4,6 +4,9 @@ dist
 # Transformed Spec Files
 tests/*.js
 
+# etc folders created from remote npm calls
+etc
+
 # Logs
 logs
 *.log
