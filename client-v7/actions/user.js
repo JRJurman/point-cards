@@ -1,4 +1,9 @@
+const defaultName = typeof localStorage !== 'undefined' ? localStorage.getItem('name') : ''
+
 module.exports = {
-  init: () => '',
-  setName: (_, newName) => newName
+  init: () => defaultName,
+  setName: (_, newName) => {
+    localStorage.setItem('name', newName)
+    return newName
+  }
 }
