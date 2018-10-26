@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "npm --prefix ./client-v7 install && npm --prefix ./server install",
-    "lint": "npm --prefix ./client-v7 lint && npm --prefix ./server lint",
+    "lint": "npm --prefix ./client-v7 lint && npm --prefix ./server run lint",
     "start:client": "npm --prefix ./client-v7 start",
     "start:server": "npm --prefix ./server start",
-    "build": "npm --prefix ./client-v7 build"
+    "build": "npm --prefix ./client-v7 run build",
+    "postbuild": "rm -rf ./dist && mv ./client-v7/dist ./dist"
   },
   "repository": {
     "type": "git",
