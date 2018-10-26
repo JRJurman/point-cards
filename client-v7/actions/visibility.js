@@ -1,5 +1,11 @@
 module.exports = {
   init: () => false,
   reveal: () => true,
-  clear: () => false
+  clear: () => false,
+  requestState: (visibility, _, actions) => {
+    if (visibility) {
+      actions.emitReveal()
+    }
+    return visibility
+  }
 }

@@ -7,5 +7,13 @@ module.exports = {
     }
     return newCards
   },
-  clear: () => ({})
+  clear: () => ({}),
+  requestState: (cards, _, actions) => {
+    // if we have cards to share, share them on request
+    if (Object.keys(cards).length > 0) {
+      actions.emitSetCards(cards)
+    }
+    return cards
+  },
+  setCards: (cards, newCards) => newCards
 }
