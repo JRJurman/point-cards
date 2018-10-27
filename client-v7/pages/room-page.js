@@ -28,8 +28,8 @@ module.exports = (store, actions, params) => {
     actions.setName(event.target.value)
   }
 
-  const onreveal = () => {
-    actions.emitReveal()
+  const onaction = () => {
+    store.visibility ? actions.emitHide() : actions.emitReveal()
   }
 
   const onclear = () => {
@@ -45,7 +45,7 @@ module.exports = (store, actions, params) => {
         ${store.visibility ? '' : 'hidden'}
         onselectcard=${onselectcard}
         onnameset=${onnameset}
-        onreveal=${onreveal}
+        onaction=${onaction}
         onclear=${onclear}>
       </room>
     </page-wrapper>

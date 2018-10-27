@@ -29,10 +29,10 @@ module.exports = (attrs, children) => {
   return html`
     <span style=${attrs.style}>
       ${buttonStyleTag}
-      <button onclick=${attrs.onreveal}
+      <button onclick=${attrs.onaction}
               class='control-button'
               style=${buttonStyle}>
-        Reveal
+        ${attrs.action}
       </button>
       <button onclick=${attrs.onclear}
               class='control-button'
