@@ -30,6 +30,12 @@ module.exports = {
     }))
     return socketConnection
   },
+  emitHide: (socketConnection) => {
+    socketConnection.send(JSON.stringify({
+      action: 'hide'
+    }))
+    return socketConnection
+  },
   emitClear: (socketConnection) => {
     socketConnection.send(JSON.stringify({
       action: 'clear'

@@ -48,9 +48,11 @@ module.exports = (attrs, children) => {
           name=${attrs.user}
           onnameset=${attrs.onnameset}>
         </name-input>
-        <user-controls style=${controlsStyle}
+        <user-controls
+          action=${attrs.hidden ? 'Reveal': 'Hide'}
+          style=${controlsStyle}
           onclear=${attrs.onclear}
-          onreveal=${attrs.onreveal}>
+          onaction=${attrs.onaction}>
         </user-controls>
       </div>
       <card-well style=${wellStyle}>
