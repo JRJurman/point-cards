@@ -14,7 +14,6 @@ module.exports = (store, actions, params) => {
   }
 
   const onselectcard = (card) => () => {
-    // if this is the selected card, clear the selection
     if (card === store.card) {
       actions.selectCard('')
       actions.vote({card: '', user: store.user})

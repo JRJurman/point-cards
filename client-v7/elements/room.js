@@ -59,7 +59,7 @@ module.exports = (attrs, children) => {
         ${votes}
       </card-well>
       <card-selector
-        ${attrs.user !== '' ? '' : 'disabled'}
+        ${attrs.user ? '' : 'disabled'}
         onselectcard=${attrs.onselectcard}
         selected=${attrs.selected}>
       </card-selector>
